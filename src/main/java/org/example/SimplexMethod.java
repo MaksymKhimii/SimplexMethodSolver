@@ -23,7 +23,7 @@ public class SimplexMethod {
         System.out.println("x2 = " + result.getValues()[1]);
         System.out.println("x3 = " + result.getValues()[2]);
         System.out.println("x4 = " + result.getValues()[3]);
-        System.out.println("значение целевой функции = " + result.getMaxProfit());
+        System.out.println("Значение целевой функции = " + result.getMaxProfit());
     }
 
     public static Result solve(LinearObjectiveFunction f, LinearConstraintSet constraints) {
@@ -35,7 +35,7 @@ public class SimplexMethod {
                         Double.MAX_VALUE,
                         Double.MAX_VALUE,
                         Double.MAX_VALUE});
-        PointValuePair solution = null;
+        PointValuePair solution;
         try {
             solution = new SimplexSolver().optimize(
                     new MaxIter(100),
